@@ -11,7 +11,7 @@ This is the working area for the individual Internet-Draft, "Amplification Attac
 ## Contributing
 
 See the
-[guidelines for contributions](https://github.com/emanjon/draft-irtf-t2trg-amplification-attacks/blob/main/CONTRIBUTING.md).
+[guidelines for contributions](https://github.com/t2trg/t2trg-amplification-attacks/blob/main/CONTRIBUTING.md).
 
 Contributions can be made by creating pull requests.
 The GitHub interface supports creating pull requests using the Edit (✏) button.
