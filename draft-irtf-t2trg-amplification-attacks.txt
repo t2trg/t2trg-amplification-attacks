@@ -43,7 +43,7 @@ About This Document
    https://www.ietf.org/mailman/listinfo/t2trg/.
 
    Source for this draft and an issue tracker can be found at
-   https://github.com/emanjon/draft-irtf-t2trg-amplification-attacks.
+   https://github.com/t2trg/t2trg-amplification-attacks.
 
 Status of This Memo
 
