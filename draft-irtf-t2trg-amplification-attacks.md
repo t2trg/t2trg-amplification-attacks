@@ -19,8 +19,8 @@
 # Change the file extension to match the format (.xml for XML, etc...)
 #
 ###
-title: "TODO - Your title"
-abbrev: "TODO - Abbreviation"
+title: "Amplification Attacks Using the Constrained Application Protocol (CoAP)"
+abbrev: "CoAP Amplification Attacks"
 category: info
 
 docname: draft-todo-yourname-protocol-latest
