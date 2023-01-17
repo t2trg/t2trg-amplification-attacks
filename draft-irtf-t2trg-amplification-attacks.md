@@ -20,7 +20,7 @@ venue:
   type: "Research Group"
   mail: "t2trg@irtf.org"
   arch: "https://mailarchive.ietf.org/arch/search/?email_list=t2trg"
-  github: "emanjon/draft-irtf-t2trg-amplification-attacks"
+  github: "t2trg/t2trg-amplification-attacks"
   latest: "https://emanjon.github.io/draft-irtf-t2trg-amplification-attacks/draft-irtf-t2trg-amplification-attacks.html"
 
 author:
