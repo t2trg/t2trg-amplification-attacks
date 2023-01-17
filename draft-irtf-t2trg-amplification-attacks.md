@@ -9,19 +9,19 @@ number:
 date:
 consensus: true
 v: 3
-area: AREA
-workgroup: WG Working Group
+area: "IRTF"
+workgroup: "Thing-to-Thing"
 keyword:
  - next generation
  - unicorn
  - sparkling distributed ledger
 venue:
-  group: WG
-  type: Working Group
-  mail: WG@example.com
-  arch: https://example.com/WG
-  github: USER/REPO
-  latest: https://example.com/LATEST
+  group: "Thing-to-Thing"
+  type: "Research Group"
+  mail: "t2trg@irtf.org"
+  arch: "https://mailarchive.ietf.org/arch/search/?email_list=t2trg"
+  github: "emanjon/draft-irtf-t2trg-amplification-attacks"
+  latest: "https://emanjon.github.io/draft-irtf-t2trg-amplification-attacks/draft-irtf-t2trg-amplification-attacks.html"
 
 author:
  -
