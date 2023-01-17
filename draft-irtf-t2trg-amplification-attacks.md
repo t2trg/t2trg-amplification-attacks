@@ -395,7 +395,7 @@ Client   Foe  Victim  Server
 
 # Summary
 
-CoAP has always considered amplification attacks, but most of the requirements in 
+CoAP has always considered amplification attacks, but most of the requirements in
 {{RFC7252}}, {{RFC7641}}, {{RFC9175}}, and
 {{I-D.ietf-core-groupcomm-bis}} are "SHOULD" instead of "MUST", it is
 undefined what a "large amplification factor" is, {{RFC7641}} does not specify
