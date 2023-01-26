@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-01-24T00:43:13.272451+00:00",
+  "timestamp": "2023-01-26T00:40:58.721886+00:00",
   "repo": "t2trg/t2trg-amplification-attacks",
   "labels": [
     {
@@ -169,6 +169,22 @@
           "updatedAt": "2023-01-17T08:46:49Z"
         }
       ]
+    },
+    {
+      "number": 7,
+      "id": "I_kwDOIykjX85cttUO",
+      "title": "Describe multicast behind a gateway",
+      "url": "https://github.com/t2trg/t2trg-amplification-attacks/issues/7",
+      "state": "OPEN",
+      "author": "emanjon",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "One deployment scenario for multicast discussed in CORE WG is that a GW is handling multicast with the CoAP servers. I.e., the client sends a unicast response to the GW and gets several unicast responses back. Multicast is between the GW and the servers.",
+      "createdAt": "2023-01-24T18:37:49Z",
+      "updatedAt": "2023-01-24T18:37:49Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": []
