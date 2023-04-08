@@ -206,15 +206,41 @@ Victim   Foe   Server
 
 ## Amplification Attacks using Observe
 
-Amplification factors can be significantly worse when combined with
-observe {{RFC7641}} and group requests {{I-D.ietf-core-groupcomm-bis}}. As a single
-request can result in multiple responses from multiple servers, the amplification
-factors can be very large.
+As a single request can result in multiple responses
+from the server, amplification factors can be very large
+when observe {{RFC7641}} is used.
 
 An amplification attack using observe is illustrated in
-{{ampmulti_nk}}. If each notification response is c times larger than the registration
+{{ampmulti_obs}}. If each notification response is c times larger than the registration
 request and each request results in n notifications, the amplification factor is c {{{⋅}}} n.
-By registering the same client several times using different Tokens or port numbers,
+
+~~~~ aasvg
+Victim   Foe   Server
+   |      |      |
+   |      +----->|       Code: 0.01 (GET)
+   |      | GET  |      Token: 0x83
+   |      |      |    Observe: 0
+   |      |      |   Uri-Path: ozone
+   |      |      |
+     ....   ....
+   |      |      |
+   |<------------+       Code: 2.05 (Content)
+   |      | 2.05 |      Token: 0x83
+   |      |      |    Observe: 80085
+   |      |      |    Payload: "21.4 ppbv"
+   |      |      |
+     ....   ....
+   |      |      |
+   |<------------+       Code: 2.05 (Content)
+   |      | 2.05 |      Token: 0x84
+   |      |      |    Observe: 80086
+   |      |      |    Payload: "21.5 ppbv"
+     ....   ....
+~~~~
+{: #ampmulti_obs title='Amplification attack using observe' artwork-align="center"}
+
+A more advanced amplification attack using observe is illustrated in
+{{ampmulti_nk}}. By registering the same client several times using different Tokens or port numbers,
 the bandwidth can be increased. By updating the observed resource, the attacker
 may trigger notifications and increase the size of the notifications. By using
 conditional attributes {{I-D.ietf-core-conditional-attributes}} an attacker may increase the frequency of
@@ -267,6 +293,10 @@ Victim   Foe   Server
 
 ## Amplification Attacks using Group Requests
 
+As a single request can result in responses from multiple servers,
+amplification factors can be very large when group requests {{I-D.ietf-core-groupcomm-bis}}
+are used.
+
 An amplification attack using a group request is illustrated in
 {{ampmulti_m}}. The group request is sent over multicast or broadcast
 and in this case a single request results in m responses
@@ -292,6 +322,10 @@ Victim   Foe    GW    Servers
      ....   ....
 ~~~~
 {: #ampmulti_m title='Amplification attack using multicast' artwork-align="center"}
+
+Even higher amplification factors can be achieved when combining group requests
+{{I-D.ietf-core-groupcomm-bis}} and observe {{RFC7641}}. In this case a single
+request can result in multiple responses from multiple servers.
 
 An amplification attack using a multicast request and observe is
 illustrated in {{ampmulti_mn}}. In this case a single request results
