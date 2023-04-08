@@ -275,20 +275,20 @@ the amplification factor is c {{{⋅}}} m. Note that the servers usually do not 
 the variable m.
 
 ~~~~ aasvg
-Victim   Foe   Servers
-   |      |      |  |
-   |      +-+--->|  |      Code: 0.01 (GET)
-   |      |  '----->|     Token: 0x69
-   |      | GET  |  |  Uri-Path: </c>
-   |      |      |  |
-   |<------------+  |      Code: 2.05 (Content)
-   |      | 2.05 |  |     Token: 0x69
-   |      |      |  |   Payload: { 1721 : { ...
-   |      |      |  |
-   |<---------------+      Code: 2.05 (Content)
-   |      | 2.05 |  |     Token: 0x69
-   |      |      |  |   Payload: { 1721 : { ...
-   |      |      |  |
+Victim   Foe    GW    Servers
+   |      |      |      |  |
+   |      +--------+--->|  |      Code: 0.01 (GET)
+   |      |      |  '----->|     Token: 0x69
+   |      |      | GET  |  |  Uri-Path: </c>
+   |      |      |      |  |
+   |<-------------------+  |      Code: 2.05 (Content)
+   |      |      | 2.05 |  |     Token: 0x69
+   |      |      |      |  |   Payload: { 1721 : { ...
+   |      |      |      |  |
+   |<----------------------+      Code: 2.05 (Content)
+   |      |      | 2.05 |  |     Token: 0x69
+   |      |      |      |  |   Payload: { 1721 : { ...
+   |      |      |      |  |
      ....   ....
 ~~~~
 {: #ampmulti_m title='Amplification attack using multicast' artwork-align="center"}
