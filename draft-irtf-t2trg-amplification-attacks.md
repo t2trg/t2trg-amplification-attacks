@@ -112,7 +112,9 @@ When transported over UDP, the CoAP NoSec mode is susceptible to source
 IP address spoofing and as a single request can result in multiple responses
 from multiple servers, CoAP can have very large amplification factors.
 The goal with this document is to raise awareness and understanding of amplification
-attacks and to motivate mitigations suitable for constrained devices and networks.
+attacks and to motivate mitigations suitable for constrained devices and networks. The
+intent is not to suggest that CoAP is more vulnerable to amplification attacks than
+other protocols.
 
 Some of the discussed attacks can be mitigated by not using
 NoSec or by using the Echo option {{RFC9175}}.
