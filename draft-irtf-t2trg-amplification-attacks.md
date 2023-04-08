@@ -300,35 +300,35 @@ responses. If each response is c times larger than the request,
 the amplification factor is c {{{⋅}}} n {{{⋅}}} m.
 
 ~~~~ aasvg
-Victim   Foe   Servers
-   |      |      |  |
-   |      +-+--->|  |      Code: 0.01 (GET)
-   |      |  '----->|     Token: 0x44
-   |      | GET  |  |  Uri-Path: temperature
-   |      |      |  |  Uri-Query: pmax="0.1"
-   |      |      |  |
-   |<------------+  |       Code: 2.05 (Content)
-   |      | 2.05 |  |      Token: 0x44
-   |      |      |  |    Observe: 217
-   |      |      |  |    Payload: "301.2 K"
-   |      |      |  |
-   |<---------------+       Code: 2.05 (Content)
-   |      | 2.05 |  |      Token: 0x44
-   |      |      |  |    Observe: 363
-   |      |      |  |    Payload: "293.4 K"
-   |      |      |  |
-     ....   ....
-   |      |      |  |
-   |<------------+  |       Code: 2.05 (Content)
-   |      | 2.05 |  |      Token: 0x44
-   |      |      |  |    Observe: 218
-   |      |      |  |    Payload: "301.2 K"
-   |      |      |  |
-   |<---------------+       Code: 2.05 (Content)
-   |      | 2.05 |  |      Token: 0x44
-   |      |      |  |    Observe: 364
-   |      |      |  |    Payload: "293.4 K"
-   |      |      |  |
+Victim   Foe    GW    Servers
+   |      |      |      |  |
+   |      +--------+--->|  |      Code: 0.01 (GET)
+   |      |      |  '----->|     Token: 0x44
+   |      |      | GET  |  |  Uri-Path: temperature
+   |      |      |      |  |  Uri-Query: pmax="0.1"
+   |      |      |      |  |
+   |<-------------------+  |       Code: 2.05 (Content)
+   |      |      | 2.05 |  |      Token: 0x44
+   |      |      |      |  |    Observe: 217
+   |      |      |      |  |    Payload: "301.2 K"
+   |      |      |      |  |
+   |<----------------------+       Code: 2.05 (Content)
+   |      |      | 2.05 |  |      Token: 0x44
+   |      |      |      |  |    Observe: 363
+   |      |      |      |  |    Payload: "293.4 K"
+   |      |      |      |  |
+   | ....          ....
+   |      |      |      |  |
+   |<-------------------+  |       Code: 2.05 (Content)
+   |      |      | 2.05 |  |      Token: 0x44
+   |      |      |      |  |    Observe: 218
+   |      |      |      |  |    Payload: "301.2 K"
+   |      |      |      |  |
+   |<----------------------+       Code: 2.05 (Content)
+   |      |      | 2.05 |  |      Token: 0x44
+   |      |      |      |  |    Observe: 364
+   |      |      |      |  |    Payload: "293.4 K"
+   |      |      |      |  |
      ....   ....
 ~~~~
 {: #ampmulti_mn title='Amplification attack using multicast and observe' artwork-align="center"}
