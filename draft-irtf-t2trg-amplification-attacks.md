@@ -172,11 +172,12 @@ Victim   Foe   Server
 ~~~~
 {: #ampsingle title='Amplification attack using a single response' artwork-align="center"}
 
-An attacker can increase the bandwidth by sending several GET requests. An attacker can
-also increase or control the amplification factor by creating or updating resources.
-By creating new resources, an attacker can increase the size of /.well-known/core.
-An amplification attack where the attacker influences the amplification factor
+An attacker can increase the bandwidth by sending several GET requests. If the server supports
+PUT/POST and doesn't limit the payload size, an attacker may be able to increase the amplification factor
+by creating or updating a resource. By creating new resources, an attacker may also increase the
+size of /.well-known/core. An amplification attack where the attacker influences the amplification factor
 is illustrated in {{ampmulti_post}}.
+
 
 ~~~~ aasvg
 Victim   Foe   Server
