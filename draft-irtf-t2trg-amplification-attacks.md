@@ -295,9 +295,11 @@ Victim   Foe   Server
 
 Amplification factors can be significantly worse when combined with observe {{RFC7641}}. As a single request can result in responses from multiple servers, the amplification factors can be very large.
 
+As the group request is sent over multicast or broadcast the request has to be sent by a node on the local network. An attacker on a local network (e.g., a compromised node) might use local CoAP servers to attack targets on the Internet or on the local network. The servers might also be accessible through a gateway (GW) that transforms unicast requests into multicast request. In such architechtures, amplification attacks using group requests might be possible to launch from the Internet.
+
 An amplification attack using a group request is illustrated in
-{{ampmulti_m}}. The group request is sent over multicast or broadcast
-and in this case a single request results in m responses
+{{ampmulti_m}}. A single unicast request results is tranformed into
+a multicast group request by the gateway and results in m responses
 from m different servers. If each response is c times larger than the request,
 the amplification factor is c {{{⋅}}} m. Note that the servers usually do not know
 the variable m.
