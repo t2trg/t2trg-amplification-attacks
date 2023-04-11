@@ -208,9 +208,7 @@ Victim   Foe   Server
 
 ## Amplification Attacks using Observe
 
-As a single request can result in multiple responses
-from the server, amplification factors can be very large
-when observe {{RFC7641}} is used.
+Amplification factors can be significantly worse when combined with observe {{RFC7641}}. As a single request can result in multiple responses from the server, the amplification factors can be very large.
 
 An amplification attack using observe is illustrated in
 {{ampmulti_obs}}. If each notification response is c times larger than the registration
@@ -295,9 +293,7 @@ Victim   Foe   Server
 
 ## Amplification Attacks using Group Requests
 
-As a single request can result in responses from multiple servers,
-amplification factors can be very large when group requests {{I-D.ietf-core-groupcomm-bis}}
-are used.
+Amplification factors can be significantly worse when combined with observe {{RFC7641}}. As a single request can result in responses from multiple servers, the amplification factors can be very large.
 
 An amplification attack using a group request is illustrated in
 {{ampmulti_m}}. The group request is sent over multicast or broadcast
@@ -329,7 +325,8 @@ Even higher amplification factors can be achieved when combining group requests
 {{I-D.ietf-core-groupcomm-bis}} and observe {{RFC7641}}. In this case a single
 request can result in multiple responses from multiple servers.
 
-An amplification attack using a multicast request and observe is
+An amplification attack using a multicast request and observe with conditional attributes
+{{I-D.ietf-core-conditional-attributes}} is
 illustrated in {{ampmulti_mn}}. In this case a single request results
 in n responses each from m different servers giving a total of n {{{⋅}}} m
 responses. If each response is c times larger than the request,
