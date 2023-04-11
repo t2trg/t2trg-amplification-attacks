@@ -327,8 +327,7 @@ Even higher amplification factors can be achieved when combining group requests
 {{I-D.ietf-core-groupcomm-bis}} and observe {{RFC7641}}. In this case a single
 request can result in multiple responses from multiple servers.
 
-An amplification attack using a multicast request and observe with conditional attributes
-{{I-D.ietf-core-conditional-attributes}} is
+An amplification attack using a multicast request and observe is
 illustrated in {{ampmulti_mn}}. In this case a single request results
 in n responses each from m different servers giving a total of n {{{⋅}}} m
 responses. If each response is c times larger than the request,
@@ -340,7 +339,6 @@ Victim   Foe    GW    Servers
    |      +--------+--->|  |      Code: 0.01 (GET)
    |      |      |  '----->|     Token: 0x44
    |      |      | GET  |  |  Uri-Path: temperature
-   |      |      |      |  |  Uri-Query: pmax="0.1"
    |      |      |      |  |
    |<-------------------+  |       Code: 2.05 (Content)
    |      |      | 2.05 |  |      Token: 0x44
@@ -357,16 +355,18 @@ Victim   Foe    GW    Servers
    |<-------------------+  |       Code: 2.05 (Content)
    |      |      | 2.05 |  |      Token: 0x44
    |      |      |      |  |    Observe: 218
-   |      |      |      |  |    Payload: "301.2 K"
+   |      |      |      |  |    Payload: "301.3 K"
    |      |      |      |  |
    |<----------------------+       Code: 2.05 (Content)
    |      |      | 2.05 |  |      Token: 0x44
    |      |      |      |  |    Observe: 364
-   |      |      |      |  |    Payload: "293.4 K"
+   |      |      |      |  |    Payload: "293.3 K"
    |      |      |      |  |
      ....   ....
 ~~~~
 {: #ampmulti_mn title='Amplification attack using multicast and observe' artwork-align="center"}
+
+An attacker can use the same techniques as in {{ampmulti_nk}} to increase the number of notifications.
 
 ## MITM Amplification Attacks
 
