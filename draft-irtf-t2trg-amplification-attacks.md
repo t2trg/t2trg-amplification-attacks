@@ -137,7 +137,7 @@ attacker might be different than the size of the data sent from the attacker.
 
 In the attacks described in this section, the attacker sends one or more requests,
 and the target receives one or more responses. By spoofing the source IP address of
-the targeted victim the and requesting as much information as possible from several
+the targeted victim and requesting as much information as possible from several
 servers an attacker can multiply the amount of traffic and create a distributed
 denial-of-service attack on the target. When transported over UDP, the CoAP NoSec
 mode is susceptible to source IP address spoofing.
