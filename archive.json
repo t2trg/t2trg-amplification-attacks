@@ -1,0 +1,271 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2023-04-23T00:42:07.839863+00:00",
+  "repo": "t2trg/t2trg-amplification-attacks",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [
+    {
+      "number": 1,
+      "id": "I_kwDOIykjX85bjSiT",
+      "title": "Adding proposals for mitigation?",
+      "url": "https://github.com/t2trg/t2trg-amplification-attacks/issues/1",
+      "state": "OPEN",
+      "author": "emanjon",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Achim Kraus @boaks commented on on Nov 9, 2022:\r\nhttps://github.com/EricssonResearch/coap-actuators/issues/23\r\n\r\nI would welcome, if proposals for mitigations are added.\r\n\r\nE.g.:\r\nObserve-Notify: send the first response/notify as separate CON message.",
+      "createdAt": "2023-01-17T08:33:36Z",
+      "updatedAt": "2023-04-12T04:51:02Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "emanjon",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Yes, I agree, there should be proposals for mitigations for all of the types of amplification attacks.",
+          "createdAt": "2023-01-17T08:34:25Z",
+          "updatedAt": "2023-01-17T08:34:25Z"
+        },
+        {
+          "author": "emanjon",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Plan to add mitigations in -03 ",
+          "createdAt": "2023-04-12T04:51:01Z",
+          "updatedAt": "2023-04-12T04:51:01Z"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "id": "I_kwDOIykjX85bjTaz",
+      "title": "MITM Amplification Attacks",
+      "url": "https://github.com/t2trg/t2trg-amplification-attacks/issues/2",
+      "state": "OPEN",
+      "author": "emanjon",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Achim Kraus @boaks commented on on Nov 9, 2022:\r\nhttps://github.com/EricssonResearch/coap-actuators/issues/22\r\n\r\nPlease add, that the other attacks could be applied \"proactive\" by an attacker.\r\n\r\nBut the attacks, changing the source address of a valid DTLS CID record, are passive attacks. The attacker must wait for such messages. That makes such attack in my opinion much less attractive.\r\n\r\n> A difference between (D)TLS and OSCORE is that in DTLS the updated address is used for all future records, while in OSCORE a new address is only used for responses to a specific request.\r\n\r\n\r\nThat depends on the roles.\r\nA coap-server will usually also only send back the response to the last/current source address.\r\nIn my deployments, clients usually don't update the server's address using CID at all.\r\nThere is a difference in a description of a protocol, which offers symmetric function and is not coupled to other layers. And a real system, which can easily use such a coupling. Sure, someone may try a different approach, therefore [draft-ietf-tls-dtls-rrc](https://datatracker.ietf.org/doc/draft-ietf-tls-dtls-rrc/) is on the way.",
+      "createdAt": "2023-01-17T08:36:36Z",
+      "updatedAt": "2023-04-12T05:56:05Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 3,
+      "id": "I_kwDOIykjX85bjUF9",
+      "title": "Amplification Attacks using Observe",
+      "url": "https://github.com/t2trg/t2trg-amplification-attacks/issues/3",
+      "state": "CLOSED",
+      "author": "emanjon",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Achim Kraus @boaks commented on on Nov 9, 2022:\r\nEricssonResearch/coap-actuators#21\r\n\r\n> Amplification factors can be significantly worse when combined with observe {{RFC7641}} and group requests {{I-D.ietf-core-groupcomm-bis}}. As a single request can result in multiple responses from multiple servers, the amplification factors can be very large.\r\n\r\n\r\nI would prefer, to first list the single observe attack and then extend that with \"multicast\". Not all belief, that \"multicast\" is a good attack vector. It may be applied in a \"local network\", but spoofed external source addresses will not work too easy, if at all.",
+      "createdAt": "2023-01-17T08:38:59Z",
+      "updatedAt": "2023-04-11T13:55:15Z",
+      "closedAt": "2023-04-11T13:55:15Z",
+      "comments": [
+        {
+          "author": "emanjon",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Achim Kraus @boaks commented on on Nov 9, 2022:\r\nhttps://github.com/EricssonResearch/coap-actuators/issues/21\r\n\r\n> requesting notifications at least 10 times every second\r\n\r\nAFAIK, the notifications are sent, when the resource is changing. So the attacker has no control of the notifications interval.\r\n\r\n\"requesting notifications maybe 10 times every second\"",
+          "createdAt": "2023-01-17T08:39:39Z",
+          "updatedAt": "2023-01-17T08:39:39Z"
+        },
+        {
+          "author": "emanjon",
+          "authorAssociation": "COLLABORATOR",
+          "body": "There is alredy a description of observe without multicast. \"2.2.  Amplification Attacks using Observe\"\r\n\r\nBut that is mixing in other stuff as well. Could expand with a simple observe attack\r\n\r\n",
+          "createdAt": "2023-04-08T07:55:21Z",
+          "updatedAt": "2023-04-08T07:55:21Z"
+        },
+        {
+          "author": "emanjon",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Agree that the Foe sending multicast is not an \"good\" attack vector. I added a gateway to the multicast figures. This is an architecture that has been discussed a lot in CORE. Then the attacker sends unicast, which the GW transforms into multicast.",
+          "createdAt": "2023-04-08T07:56:51Z",
+          "updatedAt": "2023-04-08T07:56:51Z"
+        },
+        {
+          "author": "emanjon",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> AFAIK, the notifications are sent, when the resource is changing. So the attacker has no control of the notifications interval.\r\n> \r\n> \"requesting notifications maybe 10 times every second\"\r\n\r\nMy understanding is that Uri-Query: pmax=\"0.1\" changes this, which is a reason Klaus Harke does not like that draft. My understanding is that with Uri-Query: pmax=\"0.1\" the server will send notifications 10 times per second even if the resource has not changed. I commented on that draft in CORE and that it has DoS problems. Will update based on the outcome of that discussion in CORE.",
+          "createdAt": "2023-04-08T07:59:52Z",
+          "updatedAt": "2023-04-08T07:59:52Z"
+        },
+        {
+          "author": "boaks",
+          "authorAssociation": "NONE",
+          "body": "> Uri-Query: pmax=\"0.1\"\r\n\r\nMaybe you add the RFC ? \r\nAnyway, that will be a brilliant \"honey-pot\". Each cloud server SHOULD then just block a client, which request that for about 10 min ;-).",
+          "createdAt": "2023-04-08T17:31:41Z",
+          "updatedAt": "2023-04-08T17:31:41Z"
+        },
+        {
+          "author": "emanjon",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Fixed in master. Link to conditional attributes also in the multicast+observe section.",
+          "createdAt": "2023-04-11T07:40:54Z",
+          "updatedAt": "2023-04-11T07:40:54Z"
+        },
+        {
+          "author": "boaks",
+          "authorAssociation": "NONE",
+          "body": "\"By using conditional attributes {{I-D.ietf-core-conditional-attributes}} an attacker may increase the frequency of notifications and therefore the amplification factor. \" \r\n\r\nWould it be not more precise to point out, that this only applies:\r\n\r\nIf that draft is implemented and supported at all.\r\nAnd the support doesn't limit the values range in a system specific way?\r\n",
+          "createdAt": "2023-04-11T07:49:45Z",
+          "updatedAt": "2023-04-11T07:49:45Z"
+        },
+        {
+          "author": "emanjon",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Added text similar to the one suggested above to the observe section.\r\nRemoved conditional attributributes from the multicast section, enough to mention them once.",
+          "createdAt": "2023-04-11T13:55:14Z",
+          "updatedAt": "2023-04-11T13:55:14Z"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "id": "I_kwDOIykjX85bjUoK",
+      "title": "Creating resources",
+      "url": "https://github.com/t2trg/t2trg-amplification-attacks/issues/4",
+      "state": "CLOSED",
+      "author": "emanjon",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Achim Kraus @boaks commented on on Nov 9, 2022:\r\nEricssonResearch/coap-actuators#20\r\n\r\n> An attacker can also increase or control the amplification factor by creating or updating resources. By creating new resources, an attacker can increase the size of /.well-known/core.\r\n\r\nFor me this requires to mention, that the server must support that \"PUT/POST\" and doesn't limit it.\r\nIt should also be mentioned, that usually the coap payload for one message is limited by 1024 or 1280.\r\nSo \"An attacker may be able to increase ..., if the server doesn't limit that\".",
+      "createdAt": "2023-01-17T08:40:54Z",
+      "updatedAt": "2023-04-11T13:55:35Z",
+      "closedAt": "2023-04-11T13:55:35Z",
+      "comments": [
+        {
+          "author": "emanjon",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Added the suggestions above to master",
+          "createdAt": "2023-04-11T13:55:35Z",
+          "updatedAt": "2023-04-11T13:55:35Z"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "id": "I_kwDOIykjX85bjVEO",
+      "title": "Example for \"amplification attack alone\"?",
+      "url": "https://github.com/t2trg/t2trg-amplification-attacks/issues/5",
+      "state": "CLOSED",
+      "author": "emanjon",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Achim Kraus @boaks commented on on Nov 9, 2022:\r\nEricssonResearch/coap-actuators#19\r\n\r\n> An amplification attack alone can be a denial-of-service attack on a CoAP server by making it send a large amount of data.\r\n\r\nReally?\r\nSorry, any server for any protocol must protect it self from overloading. Using that example would convert any HTTP server in a \"victim\". There we send 1k to read pictures of 200k.",
+      "createdAt": "2023-01-17T08:42:24Z",
+      "updatedAt": "2023-04-11T13:54:05Z",
+      "closedAt": "2023-04-11T13:54:04Z",
+      "comments": [
+        {
+          "author": "emanjon",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Removed this sentence in master",
+          "createdAt": "2023-04-11T13:54:04Z",
+          "updatedAt": "2023-04-11T13:54:04Z"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "id": "I_kwDOIykjX85bjWAa",
+      "title": "An address can be validated with a security protocol like DTLS, TLS, OSCORE",
+      "url": "https://github.com/t2trg/t2trg-amplification-attacks/issues/6",
+      "state": "OPEN",
+      "author": "emanjon",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "John Preu\u00df Mattsson commented on Feb 8, 2022\r\nEricssonResearch/coap-actuators#15\r\n\r\nI think this is only true for TLS and DTLS without connection ID\r\n\r\n- OSCORE just sends the response back to where the request came from. In the case of a new address Echo needs to be used. This could likely be missed by implementations.\r\n- The connection ID draft states that some mechanism need to used when the addess change.\r\n\r\nI will update the text and likely make a figure.",
+      "createdAt": "2023-01-17T08:45:45Z",
+      "updatedAt": "2023-01-17T08:46:50Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "emanjon",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Achim Kraus @boaks commented on Feb 9, 2022\r\nEricssonResearch/coap-actuators#15\r\n\r\nLet me add, that the \"address validation\" has different aspects.\r\n\r\nUsing [(upcoming) RFC9146](https://www.rfc-editor.org/rfc/authors/rfc9146.html) the source identity of the peer (given by the cid) is verified by the MAC. What is not (longer) verified is the source ip-address. So the uncertainness here is not about the received data, it's about the source ip-address to send back data.\r\nIf some data is sent back (encrypted), it's doesn't introduce a new leaking risk. What is added as risk is the possibility of being misused for an amplification attack. In difference to the more common proactive DDoS threats (attacker is able to initiate sending records with manipulated source addresses), this one is a passive one (attacker needs to wait for a valid record and then manipulates the source address). If such a passive attack is really reasonable for DDoS, may be discussed. That depends also on the usage of DTLS CID by a next layer. E.g. with CoAP / NSTART-1, I'm not sure, if enough records are send out to be manipulated and if the responses are large enough to offer amplification. And sometimes implementing protection as RRC or draft-ietf-core-echo-request-tag seems to have the smaller effort than such a discussion.",
+          "createdAt": "2023-01-17T08:46:49Z",
+          "updatedAt": "2023-01-17T08:46:49Z"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "id": "I_kwDOIykjX85cttUO",
+      "title": "Describe multicast behind a gateway",
+      "url": "https://github.com/t2trg/t2trg-amplification-attacks/issues/7",
+      "state": "CLOSED",
+      "author": "emanjon",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "One deployment scenario for multicast discussed in CORE WG is that a GW is handling multicast with the CoAP servers. I.e., the client sends a unicast response to the GW and gets several unicast responses back. Multicast is between the GW and the servers.",
+      "createdAt": "2023-01-24T18:37:49Z",
+      "updatedAt": "2023-04-11T07:39:52Z",
+      "closedAt": "2023-04-11T07:39:51Z",
+      "comments": [
+        {
+          "author": "emanjon",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Done in master",
+          "createdAt": "2023-04-11T07:39:51Z",
+          "updatedAt": "2023-04-11T07:39:51Z"
+        }
+      ]
+    }
+  ],
+  "pulls": []
+}
