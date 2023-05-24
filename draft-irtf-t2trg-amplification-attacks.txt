@@ -5,9 +5,9 @@
 Thing-to-Thing                                         J. Preuß Mattsson
 Internet-Draft                                               G. Selander
 Intended status: Informational                                  Ericsson
-Expires: 14 October 2023                                       C. Amsüss
+Expires: 25 November 2023                                      C. Amsüss
                                              Energy Harvesting Solutions
-                                                           12 April 2023
+                                                             24 May 2023
 
 
 Amplification Attacks Using the Constrained Application Protocol (CoAP)
@@ -60,7 +60,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 14 October 2023.
+   This Internet-Draft will expire on 25 November 2023.
 
 Copyright Notice
 
@@ -483,11 +483,11 @@ Table of Contents
            |      |      |      |
            +------------>|      |      Code: 0.01 (POST)
            | POST |      |      |  Uri-Path: video
-           |      |      |      |   Payload: survailance_1139.hevc
+           |      |      |      |   Payload: surveillance_1139.hevc
            |      |      |      |
            +------------>|      |      Code: 0.01 (POST)
            | POST |      |      |  Uri-Path: video
-           |      |      |      |   Payload: survailance_1140.hevc
+           |      |      |      |   Payload: surveillance_1140.hevc
              ....   ....   ....
 
         Figure 8: MITM Amplification attack by updating the server's
