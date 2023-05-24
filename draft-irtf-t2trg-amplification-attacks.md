@@ -419,11 +419,11 @@ Client   Foe  Victim  Server
    |      |      |      |
    +------------>|      |      Code: 0.01 (POST)
    | POST |      |      |  Uri-Path: video
-   |      |      |      |   Payload: survailance_1139.hevc
+   |      |      |      |   Payload: surveillance_1139.hevc
    |      |      |      |
    +------------>|      |      Code: 0.01 (POST)
    | POST |      |      |  Uri-Path: video
-   |      |      |      |   Payload: survailance_1140.hevc
+   |      |      |      |   Payload: surveillance_1140.hevc
      ....   ....   ....
 ~~~~
 {: #amp_mitm_server title='MITM Amplification attack by updating the server's source address in a response' artwork-align="center"}
