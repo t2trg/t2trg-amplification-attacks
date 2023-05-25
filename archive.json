@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-05-23T00:39:54.897347+00:00",
+  "timestamp": "2023-05-25T00:38:18.249284+00:00",
   "repo": "t2trg/t2trg-amplification-attacks",
   "labels": [
     {
@@ -265,7 +265,76 @@
           "updatedAt": "2023-04-11T07:39:51Z"
         }
       ]
+    },
+    {
+      "number": 9,
+      "id": "I_kwDOIykjX85mwjS4",
+      "title": "Amplification attacks using the block options?",
+      "url": "https://github.com/t2trg/t2trg-amplification-attacks/issues/9",
+      "state": "OPEN",
+      "author": "emanjon",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Comment from Michael Richardson to consider if there are any amplification attacks using the block options",
+      "createdAt": "2023-05-24T13:29:44Z",
+      "updatedAt": "2023-05-24T13:29:44Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 10,
+      "id": "I_kwDOIykjX85mwjxt",
+      "title": " Amplification attacks using resource directory?",
+      "url": "https://github.com/t2trg/t2trg-amplification-attacks/issues/10",
+      "state": "OPEN",
+      "author": "emanjon",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Comment from Mohit Sethi to consider if there are any amplification attacks using the resource directory",
+      "createdAt": "2023-05-24T13:30:30Z",
+      "updatedAt": "2023-05-24T13:57:42Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "ms-s",
+          "authorAssociation": "NONE",
+          "body": "Also if there any attacks when using broker: https://datatracker.ietf.org/doc/html/draft-ietf-core-coap-pubsub-10. Or can I make the victim part of a group: https://datatracker.ietf.org/doc/html/rfc7390.",
+          "createdAt": "2023-05-24T13:56:15Z",
+          "updatedAt": "2023-05-24T13:57:42Z"
+        }
+      ]
     }
   ],
-  "pulls": []
+  "pulls": [
+    {
+      "number": 8,
+      "id": "PR_kwDOIykjX85RP1X3",
+      "title": "english typo in example",
+      "url": "https://github.com/t2trg/t2trg-amplification-attacks/pull/8",
+      "state": "MERGED",
+      "author": "mcr",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "survailance -> surveillance.",
+      "createdAt": "2023-05-24T13:19:17Z",
+      "updatedAt": "2023-05-24T13:28:06Z",
+      "baseRepository": "t2trg/t2trg-amplification-attacks",
+      "baseRefName": "main",
+      "baseRefOid": "5d006921bdff145027b2e28437fd67c8440e9c0b",
+      "headRepository": "t2trg/t2trg-amplification-attacks",
+      "headRefName": "mcr-typo-surveillance",
+      "headRefOid": "8714e64ac7ae3572db8daf1a6949df80d36533d1",
+      "closedAt": "2023-05-24T13:28:05Z",
+      "mergedAt": "2023-05-24T13:28:05Z",
+      "mergedBy": "emanjon",
+      "mergeCommit": {
+        "oid": "9ae0b82e94ae8b30f80bd40e50c99525a71e9bc3"
+      },
+      "comments": [],
+      "reviews": []
+    }
+  ]
 }
