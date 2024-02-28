@@ -1,6 +1,6 @@
 # Amplification Attacks Using the Constrained Application Protocol (CoAP)
 
-This is the working area for the individual Internet-Draft, "Amplification Attacks Using the Constrained Application Protocol (CoAP)".
+This is the working area for the IRTF Thing-to-Thing Research Group Internet-Draft, "Amplification Attacks Using the Constrained Application Protocol (CoAP)".
 
 * [Editor's Copy HTML](https://t2trg.github.io/t2trg-amplification-attacks/draft-irtf-t2trg-amplification-attacks.html)
 * [Editor's Copy Text](https://t2trg.github.io/t2trg-amplification-attacks/draft-irtf-t2trg-amplification-attacks.txt)
