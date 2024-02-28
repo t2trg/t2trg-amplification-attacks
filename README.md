@@ -6,7 +6,7 @@ This is the working area for the IRTF [Thing-to-Thing Research Group](https://da
 * [Editor's Copy Text](https://t2trg.github.io/t2trg-amplification-attacks/draft-irtf-t2trg-amplification-attacks.txt)
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-irtf-t2trg-amplification-attacks)
 * [Research Group Draft](https://datatracker.ietf.org/doc/html/draft-irtf-t2trg-amplification-attacks)
-* [Compare Editor's Copy to Research Group Draft](https://t2trg.github.io/t2trg-amplification-attacks/draft-irtf-t2trg-amplification-attacks.diff)
+* [Compare Editor's Copy to Research Group Draft](https://t2trg.github.io/t2trg-amplification-attacks/#go.draft-irtf-t2trg-amplification-attacks.diff)
 
 
 ## Contributing
