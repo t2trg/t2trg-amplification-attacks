@@ -5,9 +5,9 @@
 Thing-to-Thing                                         J. Preuß Mattsson
 Internet-Draft                                               G. Selander
 Intended status: Informational                                  Ericsson
-Expires: 25 November 2023                                      C. Amsüss
+Expires: 12 June 2025                                          C. Amsüss
                                              Energy Harvesting Solutions
-                                                             24 May 2023
+                                                         9 December 2024
 
 
 Amplification Attacks Using the Constrained Application Protocol (CoAP)
@@ -60,11 +60,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 25 November 2023.
+   This Internet-Draft will expire on 12 June 2025.
 
 Copyright Notice
 
-   Copyright (c) 2023 IETF Trust and the persons identified as the
+   Copyright (c) 2024 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -540,33 +540,32 @@ Table of Contents
 
    [DDoS-Infra]
               "Critical Infrastructure Under Attack", Dark Reading ,
-              November 2021, <https://www.darkreading.com/attacks-
-              breaches/critical-infrastructure-under-attack-/a/
-              d-id/1340960>.
+              November 2021, <https://www.darkreading.com/cyberattacks-
+              data-breaches/critical-infrastructure-under-attack>.
 
    [I-D.ietf-core-conditional-attributes]
-              Koster, M., Soloway, A., and B. Silverajan, "Conditional
+              Silverajan, B., Koster, M., and A. Soloway, "Conditional
               Attributes for Constrained RESTful Environments", Work in
               Progress, Internet-Draft, draft-ietf-core-conditional-
-              attributes-06, 14 January 2023,
+              attributes-08, 17 October 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-core-
-              conditional-attributes-06>.
+              conditional-attributes-08>.
 
    [I-D.ietf-core-groupcomm-bis]
               Dijk, E., Wang, C., and M. Tiloca, "Group Communication
               for the Constrained Application Protocol (CoAP)", Work in
               Progress, Internet-Draft, draft-ietf-core-groupcomm-bis-
-              08, 11 January 2023,
+              12, 21 October 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-core-
-              groupcomm-bis-08>.
+              groupcomm-bis-12>.
 
    [I-D.ietf-core-oscore-groupcomm]
               Tiloca, M., Selander, G., Palombini, F., Mattsson, J. P.,
-              and J. Park, "Group OSCORE - Secure Group Communication
-              for CoAP", Work in Progress, Internet-Draft, draft-ietf-
-              core-oscore-groupcomm-17, 20 December 2022,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-core-
-              oscore-groupcomm-17>.
+              and R. Höglund, "Group Object Security for Constrained
+              RESTful Environments (Group OSCORE)", Work in Progress,
+              Internet-Draft, draft-ietf-core-oscore-groupcomm-23, 26
+              September 2024, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-core-oscore-groupcomm-23>.
 
    [RFC7252]  Shelby, Z., Hartke, K., and C. Bormann, "The Constrained
               Application Protocol (CoAP)", RFC 7252,
