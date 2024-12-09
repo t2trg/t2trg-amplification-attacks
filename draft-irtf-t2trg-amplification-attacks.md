@@ -63,7 +63,7 @@ informative:
   I-D.ietf-core-oscore-groupcomm:
 
   DDoS-Infra:
-    target: https://www.darkreading.com/attacks-breaches/critical-infrastructure-under-attack-/a/d-id/1340960
+    target: https://www.darkreading.com/cyberattacks-data-breaches/critical-infrastructure-under-attack
     title: "Critical Infrastructure Under Attack"
     seriesinfo:
       "Dark Reading"
